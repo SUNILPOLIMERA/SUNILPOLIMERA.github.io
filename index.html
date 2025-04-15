@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegant Touch Salon</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    nav {
+      background-color: #d48a6e;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    #home {
+      background: #f7e1d7;
+      padding: 100px 20px;
+    }
+    #home h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    #home p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    #home a {
+      padding: 12px 24px;
+      background-color: #d48a6e;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .service {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    form button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #d48a6e;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .service-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Elegant Touch</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Elegant Touch Salon</h1>
+    <p>Redefining Beauty, One Style at a Time</p>
+    <a href="#contact">Book Now</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Elegant Touch Salon was founded with a mission to empower individuals through style. Our team of passionate stylists are here to bring out the best version of you.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <h3>Haircut & Styling</h3>
+        <p>Precision cuts and trend-setting styles tailored to your personality.</p>
+      </div>
+      <div class="service">
+        <h3>Hair Coloring</h3>
+        <p>Vibrant colors and highlights using top-of-the-line products.</p>
+      </div>
+      <div class="service">
+        <h3>Skincare Treatments</h3>
+        <p>Facials and skin therapy to rejuvenate and refresh your glow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="95c7667d-8edc-41c4-b598-e75326d61d47">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
